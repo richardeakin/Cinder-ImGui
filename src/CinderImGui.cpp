@@ -966,6 +966,16 @@ namespace {
 	
 } // Anonymous namespace
 
+void newCinderFrameGuard()
+{
+	newFrameGuard();
+}
+
+void renderCinderImGui()
+{
+	render();
+}
+
 // wrong... and would not work in a multi-windows scenario
 static signals::ConnectionList sWindowConnections;
 
