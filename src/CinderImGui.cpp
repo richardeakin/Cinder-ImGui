@@ -917,7 +917,7 @@ namespace {
 		ImGuiIO& io = ImGui::GetIO();
 		io.DeltaTime = timer.getSeconds();
 
-		if( io.DeltaTime < 0.0f ) {
+		if( io.DeltaTime <= 0.0f ) {
 			CI_LOG_W("WARNING: overriding imgui deltatime because it is " << io.DeltaTime);
 			io.DeltaTime = 1.0f/60.0f;
 		}
